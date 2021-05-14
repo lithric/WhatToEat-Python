@@ -11,7 +11,7 @@ txt2 = "\n0: Random\nEnter the number of the restaurant: "
 txt11 = "invalid cuisine"
 txt21 = "invalid restaurant"
 def select(inp,iterable,exitText):
-    return iterable[int(float(inp))-1] if int(re.search("(^[0-9]*)",inp).group() or len(iterable)) < len(iterable) else lambda x=print(exitText): ''
+    return iterable[int(re.search("(^[0-9]*)",inp).group())-1] if int(re.search("(^[0-9]*)",inp).group() or len(iterable)) < len(iterable) else lambda x=print(exitText): ''
 def get_type(arr,typeof,neglegant = None):
     return [x for x in arr if isinstance(x,typeof)]
 def rec(iter = Cuisine, persist = Cuisine):
