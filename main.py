@@ -1,12 +1,13 @@
 import random
 import re
-A = ["a1","a2","a3","A"]
-B = ["b1","b2","b3","B"]
-C = ["c1","c2","c3","C"]
-D = ["d1","d2","d3","D"]
-Cuisine = [A,B,C,D]
+A = ["a1","a2","a3","name of cuisine A"]
+B = ["b1","b2","b3","name of cuisine B"]
+C = ["c1","c2","c3","name of cuisine C"]
+D = ["d1","d2","d3","name of cuisine D"]
+E = ["e1","e2","name of cuisine E"]
+Cuisine = [A,B,C,D,E]
+txt1 = ''.join([x for l in Cuisine for x in f"{Cuisine.index(l)+1}: {l[-1]}\n"])+"0: Random\nEnter the number of the cuisine: "
 Cuisine += random.choice(Cuisine)
-txt1 = "1: A\n2: B\n3: C\n4: D\n0: Random\nEnter the number of the cuisine: "
 txt2 = "\n0: Random\nEnter the number of the restaurant: "
 txt11 = "invalid cuisine"
 txt21 = "invalid restaurant"
