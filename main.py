@@ -6,12 +6,12 @@ C = ["c1","c2","c3","C"]
 D = ["d1","d2","d3","D"]
 Cuisine = [A,B,C,D]
 Cuisine += random.choice(Cuisine)
-txt1 = "1: A\n2: B\n3: C\n4: D\n5: Random\nEnter the number of the cuisine: "
-txt2 = "\n4: Random\nEnter the number of the restaurant: "
+txt1 = "1: A\n2: B\n3: C\n4: D\n0: Random\nEnter the number of the cuisine: "
+txt2 = "\n0: Random\nEnter the number of the restaurant: "
 txt11 = "invalid cuisine"
 txt21 = "invalid restaurant"
 def select(inp,iterable,exitText):
-    return iterable[int(inp)-1] if int(re.search("(^\d*)",inp).group() or len(iterable)+1) < len(iterable)+1 else lambda x=print(exitText): ''
+    return iterable[int(inp)-1] if int(re.search("(^\d*)",inp).group() or len(iterable)) < len(iterable) else lambda x=print(exitText): ''
 def get_type(arr,typeof,neglegant = None):
     return [x for x in arr if isinstance(x,typeof)]
 def rec(iter = Cuisine, persist = Cuisine):
